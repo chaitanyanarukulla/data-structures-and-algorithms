@@ -138,8 +138,8 @@ Return the resulting output array.
 const fizzbuzz = (arr) => {
   let outputArry = [];
   arr.forEach((i) => {
-      if( i % 3 === 0){outputArry.push('Fizz') }
-      else if(i % 3 === 0 && i % 5 === 0){outputArry.push('Fizz Buzz') }
+     if(i % 3 === 0 && i % 5 === 0){outputArry.push('Fizz Buzz') }
+      else if( i % 3 === 0){outputArry.push('Fizz') }
       else if(i % 5 === 0){outputArry.push('Buzz')}
       else {outputArry.push(i)}
     });
