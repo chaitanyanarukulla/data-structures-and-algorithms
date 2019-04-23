@@ -9,10 +9,7 @@ Then, write a function named speaker that takes in a string and a callback funct
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => word.toUpperCase();
- 
 const speaker = (message, greeting ) => greeting(message);
-
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -33,10 +30,10 @@ Return the modified array.
 const addValues = (arr, value) => arr.push(value);
 
 const addNumbers = (num, arr, times, addValues) => {
-  for(var i = 0 ; i < times; i++){
-    addValues(arr,num)
+  for(let i = 0 ; i < times; i++){
+    addValues(arr,num);
   }
-  return arr
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -58,10 +55,10 @@ const removeOne = (num, arr) => {
 };
 
 const removeElements = (arr, callback) => {
-  for(var i = 0; i< arr.length ;i++){
-  callback(arr[i],arr);
+  for(let i = 0; i< arr.length ;i++){
+    callback(arr[i],arr);
   }
- return arr
+  return arr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -71,7 +68,7 @@ Write a function named removeWithForEach that produces the same output as challe
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithForEach = (arr, callback) => {
-  arr.forEach(i => {callback(arr[i],arr);});
+  arr.forEach(number => {callback(number,arr);});
   return arr
 };
 
@@ -87,7 +84,7 @@ This anonymous function should accept up to three arguments: the element, the in
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithAnon = (arr) => {
-  arr.forEach((i)=>{if(i % 3 === 2){
+  arr.forEach(num =>{if(num % 3 === 2){
     arr.pop();
   }})
   return arr
@@ -113,11 +110,11 @@ If the item is available, add it to your list. Return the final list.
 
 const createList = (availableItems) => {
   let groceryList = [];
-  availableItems.forEach((i)=>{if(i.available === true){
-  groceryList.push(i.name);
+  availableItems.forEach(num =>{if(num.available === true){
+    groceryList.push(num.name);
   }
-})
-return groceryList;
+  })
+  return groceryList;
   // Solution code here...
 };
 
@@ -137,14 +134,14 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   let outputArry = [];
-  arr.forEach((i) => {
-     if(i % 3 === 0 && i % 5 === 0){outputArry.push('Fizz Buzz') }
-      else if( i % 3 === 0){outputArry.push('Fizz') }
-      else if(i % 5 === 0){outputArry.push('Buzz')}
-      else {outputArry.push(i)}
-    });
-    return outputArry;
- };
+  arr.forEach(num => {
+    if(num % 3 === 0 && num % 5 === 0){outputArry.push('Fizz Buzz') }
+    else if(num % 3 === 0){outputArry.push('Fizz') }
+    else if(num % 5 === 0){outputArry.push('Buzz')}
+    else {outputArry.push(num)}
+  });
+  return outputArry;
+};
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
