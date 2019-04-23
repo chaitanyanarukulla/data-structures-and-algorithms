@@ -58,7 +58,7 @@ const removeElements = (arr, callback) => {
   for(let i = 0; i< arr.length ;i++){
     callback(arr[i],arr);
   }
-  return arr
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -69,7 +69,7 @@ Write a function named removeWithForEach that produces the same output as challe
 
 const removeWithForEach = (arr, callback) => {
   arr.forEach(number => {callback(number,arr);});
-  return arr
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -87,7 +87,7 @@ const removeWithAnon = (arr) => {
   arr.forEach(num =>{if(num % 3 === 2){
     arr.pop();
   }})
-  return arr
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
