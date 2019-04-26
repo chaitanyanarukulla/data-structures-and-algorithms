@@ -4,7 +4,7 @@
 CHALLENGE 1
 
 Write a function named isNum that takes in a string or number of any length.
- This function should use a regular expression pattern to return true if the input 
+ This function should use a regular expression pattern to return true if the input
  contains a number, and false if the input does not contain a number.
 
 For example:
@@ -19,7 +19,7 @@ const isNum = (input) => (/\d/).test(input);
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named isCapitalized that takes in a string. This function should 
+Write a function named isCapitalized that takes in a string. This function should
 use a regular expression pattern to match all words that begin with a capital letter
 . It should only match words, not punctuation.
 
@@ -27,8 +27,7 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  let re =/[A-Z]\w+/g;
-  let found = str.match(re);
+  let found = str.match(/\b[A-Z]\w+\b/g);
   if(found){
     return found
   }else{
@@ -39,12 +38,22 @@ const isCapitalized = (str) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named citiesAtoJ that takes in an array of city names and uses a regular expression pattern to return a new array containing any cities that begin with the letters A through J, inclusive.
+Write a function named citiesAtoJ that takes in an array of city names and
+uses a regular expression pattern to return a new array containing any cities
+that begin with the letters A through J, inclusive.
 ------------------------------------------------------------------------------------------------ */
 
-const citiesAtoJ = (arr) => {
-  // Solution code here...
-};
+let citiesAtoJ = (arr) => {
+  let regex =/[A-J]\s\w/g;
+  let temparr = [] ;
+  for(let i = 0; i<arr.length; i++){
+    if(arr[i].match(regex)){
+      temparr.push((arr[i].match(regex))[0]);
+    }
+  }
+  return temparr;
+}
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -65,7 +74,8 @@ const matchMonth = (input) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named noPunctuation that contains a regular expression pattern to find all of the words that contain a space immediately at the end of the word. Return an array of all such words, still containing the space at the end.
+Write a function named noPunctuation that contains a regular expression pattern to find all of the words that contain 
+a space immediately at the end of the word. Return an array of all such words, still containing the space at the end.
 
 For example, if given the string "Hello, and have a wonderful day!", the word "Hello, " would not be returned because it is immediately followed by a comma. The word "day!" would not be returned because it is immediately followed by an exclamation point.
 
@@ -88,9 +98,8 @@ The function should return a string containing the consonants in their original 
 For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 ------------------------------------------------------------------------------------------------ */
 
-let hangman = (str) => {
-  // Solution code here...
-};
+let hangman = (str) =>  str.replace(/[aeiou]/g,'_');
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
@@ -104,9 +113,8 @@ Hint: All of these words end with the letters "ells".
 
 const seashells = 'She sells seashells by the seashore. The shells she sells are surely seashells. So if she sells shells on the seashore, I\'m sure she sells seashore shells.';
 
-const findShells = (str) => {
-  // Solution code here...
-};
+const findShells = (str) => str.match(/\w+ells/g)
+
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
