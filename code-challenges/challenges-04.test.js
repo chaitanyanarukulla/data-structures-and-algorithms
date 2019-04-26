@@ -34,6 +34,8 @@ const isCapitalized = (str) => {
     return [];
   }
 };
+// const isCapitalized = (str) => str.match(/\b[A-Z]\w+\b/g):[]
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -43,16 +45,15 @@ uses a regular expression pattern to return a new array containing any cities
 that begin with the letters A through J, inclusive.
 ------------------------------------------------------------------------------------------------ */
 
-let citiesAtoJ = (arr) => {
-  let regex =/[A-J]\s\w/g;
+const citiesAtoJ = (arr) => {
   let temparr = [] ;
-  for(let i = 0; i<arr.length; i++){
-    if(arr[i].match(regex)){
-      temparr.push((arr[i].match(regex))[0]);
+  arr.forEach(city => {
+    if(/^[A-J]/.test(city)){
+      temparr.push(city);
     }
-  }
+  });
   return temparr;
-}
+};
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -67,9 +68,9 @@ If the user enters any of these four inputs, return true. For any other input, r
 Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
-const matchMonth = (input) => {
-  // Solution code here...
-};
+const matchMonth = (input)=> /^[Oo]ct(ober)?$/.test(input);
+// Solution code here...
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -82,9 +83,7 @@ For example, if given the string "Hello, and have a wonderful day!", the word "H
 The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "a ", "wonderful "].
 ------------------------------------------------------------------------------------------------ */
 
-const noPunctuation = str => {
-  // Solution code here...
-};
+const noPunctuation = str => str.match(/\w+ /ig);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -98,7 +97,7 @@ The function should return a string containing the consonants in their original 
 For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 ------------------------------------------------------------------------------------------------ */
 
-let hangman = (str) =>  str.replace(/[aeiou]/g,'_');
+let hangman = (str) =>  str.replace(/[aeiou]/gi,'_');
 
 
 /* ------------------------------------------------------------------------------------------------
