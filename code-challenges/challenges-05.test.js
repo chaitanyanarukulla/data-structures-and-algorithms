@@ -1,6 +1,5 @@
 'use strict';
 
-import { whileStatement } from "@babel/types";
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
@@ -93,8 +92,8 @@ const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
   for(let i=0; i<recipe.ingredients.length; i++){
-    let item = recipe.ingredients[i].slice(recipe.ingredients[i].indexOf(' ', (recipe.ingredients[i].indexOf(' ') + 1))+1);
-    result.push(item);
+    result.push(recipe.ingredients[i].slice(recipe.ingredients[i].indexOf(' ', (recipe.ingredients[i].indexOf(' ') + 1))+1));
+   
   }
   console.log(result);
   return result;
