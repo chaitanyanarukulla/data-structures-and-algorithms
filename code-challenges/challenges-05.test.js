@@ -93,7 +93,6 @@ const listFoods = (recipe) => {
   // Solution code here...
   for(let i=0; i<recipe.ingredients.length; i++){
     result.push(recipe.ingredients[i].slice(recipe.ingredients[i].indexOf(' ', (recipe.ingredients[i].indexOf(' ') + 1))+1));
-   
   }
   console.log(result);
   return result;
@@ -137,8 +136,7 @@ const stepActions = (recipe) => {
   let result = [];
   // Solution code here...
   for(let i=0; i<recipe.steps.length; i++){
-    let splitted = recipe.steps[i].split(' ');
-    result.push(splitted[0]);
+    result.push(recipe.steps[i].split(' ')[0]);
   }
   return result;
 };
@@ -158,14 +156,14 @@ For example:
 
 const removeEvenValues = (arr) => {
   // Solution code here...
-  let cnt = 0;
+  let count = 0;
   let len = arr.length;
   for(let i = 0; i < len; i++){
     console.log(i + ' parse: '+ arr);
-    if(arr[i-cnt] % 2 === 0){
-      console.log(arr[i-cnt]);
-      arr.splice(i-cnt,1);
-      cnt++;
+    if(arr[i-count] % 2 === 0){
+      console.log(arr[i-count]);
+      arr.splice(i-count,1);
+      count++;
     }
   }
   return arr;
