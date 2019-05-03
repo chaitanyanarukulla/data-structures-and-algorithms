@@ -9,7 +9,7 @@ input, uses reduce to count the number of elements in the array.
 Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
-const countNumberOfElements = (arr) => arr.reduce((a,num) => a + 1, 0);
+const countNumberOfElements = (arr) => arr.reduce((acc,num) => acc + 1, 0);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -67,7 +67,7 @@ let starWarsData = [{
   gender: 'female'
 }];
 
-const returnNames = (arr) => arr.reduce((a, starWarsData) => a.concat(starWarsData.name), []);
+const returnNames = (arr) => arr.reduce((acc, starWarsData) => acc.concat(starWarsData.name), []);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -77,7 +77,7 @@ Write a function named reversedString that takes in a string and returns a strin
 Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 ------------------------------------------------------------------------------------------------ */
 
-const reversedString = (arr) => arr.split('').reduce((a, i) => a = i + a, '');
+const reversedString = (arr) => arr.split('').reduce((acc, i) => acc = i + acc, '');
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -128,7 +128,7 @@ const characters = [
   },
 ];
 
-const countNumberOfChildren = (arr) => arr.reduce((a, i) => a + (i.children ? i.children.length : 0), 0);
+const countNumberOfChildren = (arr) => arr.reduce((acc, i) => acc + (i.children ? i.children.length : 0), 0);
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
@@ -137,7 +137,7 @@ Write a function that, given an array of numbers as input, uses reduce to calcul
 Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
-const calculateAverage = (arr) => arr.reduce((a, i) => a + i) / arr.length;
+const calculateAverage = (arr) => arr.reduce((acc, i) => acc + i) / arr.length;
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -157,7 +157,7 @@ const isPrime = (value) => {
 };
 
 
-const countPrimeNumbers = (arr) => arr.reduce((a, i) => a + (isPrime(i) ? 1 : 0) , 0);
+const countPrimeNumbers = (arr) => arr.reduce((acc, i) => acc + (isPrime(i) ? 1 : 0) , 0);
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -200,11 +200,11 @@ const snorlaxData = {
 };
 
 
-const extractStat = (statName, arr) => arr.reduce((a, c) => {
-  if (c.stat.name === statName) {
-    a = c;
+const extractStat = (statName, arr) => arr.reduce((acc, count) => {
+  if (count.stat.name === statName) {
+    acc = count;
   }
-  return a;
+  return acc;
 },);
 
 
@@ -218,9 +218,9 @@ Write a function named extractChildren that, given the array of characters from 
 2) Then, uses reduce to return an array of all the children's names in the filtered array
 ------------------------------------------------------------------------------------------------ */
 
-const extractChildren = (arr) => arr.filter(f => f.name.match(/a/g) && f.children).reduce((a, c) => {
-  if (c.children) {
-    return a.concat(c.children);
+const extractChildren = (arr) => arr.filter(f => f.name.match(/a/g) && f.children).reduce((acc, count) => {
+  if (count.children) {
+    return acc.concat(count.children);
   }
 }, []);
 
