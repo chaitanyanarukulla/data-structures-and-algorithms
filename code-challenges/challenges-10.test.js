@@ -36,9 +36,8 @@ This function should then raise 2 to the power of the resulting numbers, returni
 For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
-const divisibleByFiveTwoToThePower = (input) => {
-  // Solution code here...
-};
+const divisibleByFiveTwoToThePower = (input) => input.map(ele => ele.filter(ele => (typeof ele === 'number' && ele % 5 === 0)).map(ele => 2**ele));
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -102,9 +101,7 @@ let starWarsData = [{
   gender: 'female'
 }];
 
-let findMaleAndFemale = (data) => {
-  // Solution code here...
-};
+let findMaleAndFemale = (data) => data.filter( person => /male/.test(person.gender)).map(person => person.name).join(' and ');
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
