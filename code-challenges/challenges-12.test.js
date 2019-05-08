@@ -3,12 +3,12 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 
-You friend Pat has a chain of stores around the greater Seattle area. He specializes in 
+You friend Pat has a chain of stores around the greater Seattle area. He specializes in
 selling salmon cookies. Pat has data for the hourly sales of cookies per hour for each store.
  He wants to create an array of the total number of cookies sold per hour for all of his stores combined.
 
-Write a function named grandTotal that adds up the cookies sales for each hour of 
-operation for all of the stores combined. For example, the first element in the 
+Write a function named grandTotal that adds up the cookies sales for each hour of
+operation for all of the stores combined. For example, the first element in the
 hourlySales array should be the sum of the cookies sold in the 9:00 a.m. hour at all five stores combined.
 
 For this example, the total at 9:00 a.m. is 17 + 26 + 7 + 5 + 33, or 88 total cookies.
@@ -31,21 +31,23 @@ const grandTotal = (stores) => stores.reduce((acc, count) => acc.map((element, i
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Pat has decided that he would also like to organize his data as objects containing the number of cookies sold per hour and the time.
+Pat has decided that he would also like to organize his data as objects containing
+ the number of cookies sold per hour and the time.
 
 Here is sample data for the 9:00 sales: { sales: '88 cookies', time: '9 a.m.' }.
 
-Write a function named salesData that uses forEach to iterate over the hourlySales array and create an object for each hour. Return an array of the formatted data.
+Write a function named salesData that uses forEach to iterate over the hourlySales
+array and create an object for each hour. Return an array of the formatted data.
 ------------------------------------------------------------------------------------------------ */
 
-const salesData = (hours, data) => {
-  // Solution code here...
-};
+
+const salesData = (hours, data) => data.map((element, index) => ({ sales: `${element} cookies`, time: hours[index] }));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named howManyTreats that will return the quantity of treats you need to pick up from the pet store today from this array.
+Write a function named howManyTreats that will return the quantity of treats you need to
+ pick up from the pet store today from this array.
 ------------------------------------------------------------------------------------------------ */
 
 const errands = [
@@ -59,10 +61,7 @@ const errands = [
     items: [ { name: 'Cans of food', quantity: 8 }, { name: 'Treats', quantity: 24 }, { name: 'Leash', quantity: 1 } ]
   }
 ];
-
-const howManyTreats = (arr) => {
-  // Solution code here...
-};
+const howManyTreats = (arr) => arr.reduce((accumulator, currentVal) => currentVal.store === 'Pet store' ? currentVal.items[1].quantity : null);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -82,9 +81,8 @@ Here is a sample board:
 The top row of the board is considered row zero and row numbers increase as they go down.
 ------------------------------------------------------------------------------------------------ */
 
-const battleship = (board, row, col) => {
-  //  Solution code here...
-};
+const battleship = (board, row, col) => board[row][col] === '#' ? 'hit':'miss'
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -96,14 +94,27 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 
 const calculateProduct = (numbers) => {
   // Solution code here...
-};
+  let totalAnswer = 1;
+  let total = 1;
+  for(let i = 0; i < numbers.length; i++){
+    for(let j = 0; j < numbers[i].length; j++){
+      total *= numbers[i][j];
+    }
+    totalAnswer *= total;
+    total = 1;
+  }
+  return totalAnswer;
+ };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named averageDailyTemperature that accepts a two-dimensional array representing average daily temperatures grouped week-by-week.
+Write a function named averageDailyTemperature that accepts a two-dimensional array 
+representing average daily temperatures grouped week-by-week.
 
-Calculate the average daily temperature during that entire period. Your output should be a single number. Write your function so it could accept an array with any number of weeks given to it.
+Calculate the average daily temperature during that entire period. Your output 
+should be a single number. Write your function so it could accept an array with any
+ number of weeks given to it.
 ------------------------------------------------------------------------------------------------ */
 
 // Real daily average temperatures for Seattle, October 1-28 2017
@@ -115,6 +126,7 @@ const weeklyTemperatures = [
 ];
 
 const averageDailyTemperature = (weather) => {
+
   // Solution code here...
 };
 
