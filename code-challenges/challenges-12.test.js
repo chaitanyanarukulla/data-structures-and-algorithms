@@ -104,15 +104,15 @@ const calculateProduct = (numbers) => {
     total = 1;
   }
   return totalAnswer;
- };
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named averageDailyTemperature that accepts a two-dimensional array 
+Write a function named averageDailyTemperature that accepts a two-dimensional array
 representing average daily temperatures grouped week-by-week.
 
-Calculate the average daily temperature during that entire period. Your output 
+Calculate the average daily temperature during that entire period. Your output
 should be a single number. Write your function so it could accept an array with any
  number of weeks given to it.
 ------------------------------------------------------------------------------------------------ */
@@ -164,18 +164,18 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 ------------------------------------------------------------------------------------------------ */
 
 const excel = (str) => {
- const sum = [];
- const rows = string.split('\n');
- rows.forEach(row => {
-  let sum = 0;
-  const cols = row.split(',');
-  cols.forEach( col => {
-   const num = parseInt(col);
-   sum = sum + num;
-  });
-  sums.push(sum);
- })
- return sums;
+  const sums = [];
+  const rows = string.split('\n');
+  rows.forEach(row => {
+    let sum = 0;
+    const cols = row.split(',');
+    cols.forEach( col => {
+      const num = parseInt(col);
+      sum = sum + num;
+    });
+    sums.push(sum);
+  })
+  return sums;
 };
 
 /* ------------------------------------------------------------------------------------------------
