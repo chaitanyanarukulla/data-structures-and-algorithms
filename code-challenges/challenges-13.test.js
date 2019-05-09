@@ -76,9 +76,7 @@ along with a target string. Return an array containing only those strings
  from the original array that contain the target string.
 ------------------------------------------------------------------------------------------------ */
 
-const findAnything = (arr, target) => {
-  // Solution code here...
-};
+const findAnything = (arr, target) => arr.filter(s => s.includes(target));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
@@ -127,9 +125,7 @@ For example, ['Tuesday', 'Monday', 'Wednesday and Thursday', 'Tuesday 2', 'Thurs
 
 const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-const sortByDay = (arr) => {
-  // Solution code here...
-};
+const sortByDay = (arr) => daysOfWeek.map(day => arr.filter(event => event.includes(day)));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 10 - Stretch Goal
