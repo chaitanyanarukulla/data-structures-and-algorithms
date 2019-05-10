@@ -9,9 +9,9 @@ Write a function named toTitleCase that takes in an array of strings and
 For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyver'].
 ------------------------------------------------------------------------------------------------ */
 
-const toTitleCase = (arr) => {
+const toTitleCase = (arr) => arr.map( a => a.charAt(0).toUpperCase() + a.substr(1) );
  
-};
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
