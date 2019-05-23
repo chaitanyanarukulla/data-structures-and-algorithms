@@ -83,9 +83,14 @@ let starWarsData = [{
   birth_year: '27BBY',
   gender: 'n/a'
 }];
-
 let biggerThanLuke = (arr) => {
-  // Solution code here...
+  return arr.filter((element, index) =>{
+    
+    if (Number(element.mass) > Number(arr[0].mass)){
+      return element.name;
+    }
+  }).map(element => element.name)
+    .join(' - ');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -103,9 +108,13 @@ This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
-  // Solution code here...
+  
+  if (property === 'name'){
+    return arr.sort((a, b) => a.name < b.name ? -1 : 1);
+  }else{
+    return arr.sort((valA, valB) => valA.price - valB.price);
+  }
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -118,9 +127,7 @@ http://www.insecure.com returns false because the URL is not secure
 https://secure.com returns true because the URL is secure
 https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
-const isSecure = (url) => {
-// Solution code here...
-};
+const isSecure = (url) => /https:\/{2}/.test(url)
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
