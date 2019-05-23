@@ -10,7 +10,7 @@ public class ArrayReverse {
     rvereseArray(startArr); 
 
   // print out the result, nicely
-        System.out.print("Reversed array is \n"); 
+        System.out.println("Reversed array is"); 
         System.out.println(Arrays.toString(startArr));
          
     }
