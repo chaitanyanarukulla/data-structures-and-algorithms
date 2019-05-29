@@ -1,9 +1,8 @@
 package Java;
 
-
 import org.junit.Test;
 import static org.junit.Assert.*;
-
+// testing
 public class ArrayShiftTest {
     @Test
     public void test_ArrayShift_If_Array_Is_Empty() {
