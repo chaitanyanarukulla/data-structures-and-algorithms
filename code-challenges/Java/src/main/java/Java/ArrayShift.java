@@ -3,6 +3,7 @@ package Java;
 public class ArrayShift {
     public static int[] insertShiftArray(int[] inputArray, int value) {
         int newArray[] = new int[inputArray.length + 1];
+
         int i;
         int odd = inputArray.length % 2;
         int midPoint = inputArray.length / 2 + odd;
