@@ -11,4 +11,14 @@
   
   ### Solution 
   - [LinkedList Code](../../src/main/java/linkedList/LinkedList.java)
+  ##API
+  ```
+  LinkedList.insert 
+  ```
+  ```
+  LinkedList.Includes
+   ```
+  ```
+  LinkedList.prints
+  ```
   - [LinkedList Test ](../../src/main/java/linkedList/LinkedListTest.java)
