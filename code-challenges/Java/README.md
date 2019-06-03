@@ -10,7 +10,7 @@
 
 - [Day 3 : Array binary search](Assets/README/Array_Binary_Search_README.md)
 
-- [Day 4 : LinkedList ](Assets/README/LinkedList_READ.md)
+- [Day 4 : LinkedList](Assets/README/LinkedList_READ.md)
 
   
   
