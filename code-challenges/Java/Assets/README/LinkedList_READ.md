@@ -11,6 +11,11 @@
   
   ### Solution 
   - [LinkedList Code](../../src/main/java/linkedList/LinkedList.java)
+  
+  #### White board Solution  for LinkedList append, insertBefore and insertAfter
+   ![](../images/LinkedList.jpg)
+  
+  
   ##API
   ```
   LinkedList.insert 
@@ -21,4 +26,13 @@
   ```
   LinkedList.prints
   ```
+  ```
+  LinkedList.insertBefore
+```
+```
+LinkedList.append
+```
+```
+LinkedList.insertAfter
+```
   - [LinkedList Test ](../../src/main/java/linkedList/LinkedListTest.java)
