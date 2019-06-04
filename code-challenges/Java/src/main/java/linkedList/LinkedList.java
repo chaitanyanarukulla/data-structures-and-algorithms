@@ -12,10 +12,10 @@ public class LinkedList {
         this.head.next = olH;
     }
 
-    public boolean Includes(int d){
+    public boolean Includes(int data){
         Node current = this.head;
         while(current.next != null){
-            if(current.data == d){
+            if(current.data == data){
                 return true;
             }
             current = current.next;
@@ -39,5 +39,60 @@ public class LinkedList {
         return answer;
     }
 
-}
+    public Node append(int data) {
+        Node newNode = new Node(data);
+        if (this.head == null) {
+            this.head = newNode;
+            return newNode;
+        }
+        Node current = head;
+        while (current.next != null) {
+            current = current.next;
+        }
+        current.next = newNode;
+        return newNode;
+    }
+
+    public void insertBefore(int x, int data) {
+        Node current = this.head;
+        Node prev = null;
+        if (head != null) {
+            while (current != null) {
+                if (current.data == x) {
+                    Node n = new Node(data);
+                    n.next = current;
+                    if (prev != null) {
+                        prev.next = n;
+                    }
+                    if(head.data == x){
+                        this.head = n;
+                    }
+                    return;
+                }
+                prev = current;
+                current = current.next;
+            }
+        }
+    }
+
+    public void insertAfter(int x, int data) {
+        Node current = this.head;
+        if (head != null) {
+            while (current != null) {
+                if (current.data == x) {
+                    Node n = new Node(data);
+                    n.next = current.next;
+                    current.next = n;
+                    return;
+                } else {
+                    current = current.next;
+                }
+
+            }
+        }
+    }
+
+    }
+
+
 
