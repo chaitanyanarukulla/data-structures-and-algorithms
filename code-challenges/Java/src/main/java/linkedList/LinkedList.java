@@ -92,7 +92,36 @@ public class LinkedList {
         }
     }
 
+    public boolean checkForEmptyLL(){
+        if(head == null){
+            return true;
+        } else {
+            return false;
+        }
     }
+
+    public int returnNfromTheEnd(int k){
+        Node current = head;
+        if (k < 0){
+            throw new IllegalArgumentException("k must be postitive");
+        }
+        if(checkForEmptyLL()){
+            throw new NullPointerException("nothing in the linked list");
+        } else {
+            int counter = 0;
+            while(current != null){
+                counter++;
+                current = current.next;
+            }
+            current = head;
+            for(int i = 0; i < counter - k - 1; i++){
+                current = current.next;
+            }
+            return current.data;
+        }
+    }
+    }
+
 
 
 

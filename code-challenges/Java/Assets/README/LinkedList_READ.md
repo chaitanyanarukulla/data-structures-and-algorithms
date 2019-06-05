@@ -14,6 +14,11 @@
   
   #### White board Solution  for LinkedList append, insertBefore and insertAfter
    ![](../images/LinkedList.jpg)
+   
+  #### White board Solution for ll_kth_from_end
+  ![](../images/ll_kth_from_end.jpg)
+  
+  #### Shout out to Luke chandler fro helping me  writing test for  ll_kth_from_end . 
   
   
   ##API
@@ -34,5 +39,8 @@ LinkedList.append
 ```
 ```
 LinkedList.insertAfter
+```
+```
+LinkedList.ll_kth_from_end
 ```
   - [LinkedList Test ](../../src/main/java/linkedList/LinkedListTest.java)
