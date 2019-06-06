@@ -18,6 +18,9 @@
   #### White board Solution for ll_kth_from_end
   ![](../images/ll_kth_from_end.jpg)
   
+  #### White board Solution for mergeLists
+   ![](../images/mergeLists.jpg)
+  
   #### Shout out to Luke chandler fro helping me  writing test for  ll_kth_from_end . 
   
   
@@ -42,5 +45,8 @@ LinkedList.insertAfter
 ```
 ```
 LinkedList.ll_kth_from_end
+```
+```
+LinkedList.mergeLists
 ```
   - [LinkedList Test ](../../src/main/java/linkedList/LinkedListTest.java)
