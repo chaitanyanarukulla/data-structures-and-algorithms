@@ -4,7 +4,7 @@ import java.io.*;
 
 public class LinkedList {
     public  Node head;
-
+//  Linkedlist class
     public void insert(int data){
         Node olH = this.head;
         Node newHead = new Node(data);
@@ -12,6 +12,11 @@ public class LinkedList {
         this.head.next = olH;
     }
 
+// getter to get head
+    public Node getHead() {
+        return this.head;
+    }
+// method to look up includes
     public boolean Includes(int data){
         Node current = this.head;
         while(current.next != null){
@@ -24,7 +29,7 @@ public class LinkedList {
 
         return false;
     }
-
+// method to print
     public String prints(){
         Node current = this.head;
         String answer = "";
@@ -38,7 +43,7 @@ public class LinkedList {
         }
         return answer;
     }
-
+// mrthod to append
     public Node append(int data) {
         Node newNode = new Node(data);
         if (this.head == null) {
@@ -52,7 +57,7 @@ public class LinkedList {
         current.next = newNode;
         return newNode;
     }
-
+// method to insert before
     public void insertBefore(int x, int data) {
         Node current = this.head;
         Node prev = null;
@@ -74,7 +79,7 @@ public class LinkedList {
             }
         }
     }
-
+// method to insert After
     public void insertAfter(int x, int data) {
         Node current = this.head;
         if (head != null) {
@@ -91,7 +96,7 @@ public class LinkedList {
             }
         }
     }
-
+// method to check for empty List
     public boolean checkForEmptyLL(){
         if(head == null){
             return true;
@@ -99,7 +104,7 @@ public class LinkedList {
             return false;
         }
     }
-
+// method to return  node from nth term
     public int returnNfromTheEnd(int k){
         Node current = head;
         if (k < 0){
@@ -120,7 +125,29 @@ public class LinkedList {
             return current.data;
         }
     }
+// merger Two linked List
+    public static LinkedList mergeLists(LinkedList one, LinkedList two) {
+        Node oneCurrent = one.getHead();
+        Node twoCurrent = two.getHead();
+        Node temp1;
+        Node temp2;
+        // if list are empty
+        if (oneCurrent == null) return two;
+        if (twoCurrent == null) return one;
+        while(true){
+            temp1 = oneCurrent.next;
+            temp2 = twoCurrent.next;
+            oneCurrent.next = twoCurrent;
+            oneCurrent = temp1;
+            if (oneCurrent == null) break;
+            twoCurrent.next = oneCurrent;
+            twoCurrent = temp2;
+            if (twoCurrent == null) break;
+        }
+        return one;
+        }
     }
+
 
 
 

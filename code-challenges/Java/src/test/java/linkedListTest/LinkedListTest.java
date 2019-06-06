@@ -228,5 +228,57 @@ public class LinkedListTest {
         assertEquals(11, testing.returnNfromTheEnd(3));
     }
 
+    @Test
+    public void test_mergeLists(){
+        LinkedList ll_one = new LinkedList();
+        LinkedList ll_two = new LinkedList();
+        ll_one.insert(12);
+        ll_one.insert(14);
+        ll_one.insert(16);
+        ll_two.insert(13);
+        ll_two.insert(15);
+        ll_two.insert(17);
+        assertEquals("16, 17, 14, 15, 12, 13, null", LinkedList.mergeLists(ll_one, ll_two).prints());
+    }
+
+    @Test
+    public void test_mergeLists_with_diffrent_length_ll1(){
+        LinkedList ll_one = new LinkedList();
+        LinkedList ll_two = new LinkedList();
+        ll_one.insert(12);
+        ll_one.insert(14);
+        ll_one.insert(16);
+        ll_two.insert(13);
+        ll_two.insert(15);
+        ll_two.insert(17);
+        ll_two.insert(18);
+        ll_two.insert(19);
+        ll_two.insert(120);
+        assertEquals("16, 120, 14, 19, 12, 18, 17, 15, 13, null", LinkedList.mergeLists(ll_one, ll_two).prints());
+    }
+
+    @Test
+    public void test_mergeLists_with_diffrent_length_ll2(){
+        LinkedList ll_one = new LinkedList();
+        LinkedList ll_two = new LinkedList();
+        ll_one.insert(12);
+        ll_one.insert(14);
+        ll_one.insert(16);
+        ll_two.insert(13);
+        ll_two.insert(15);
+        assertEquals("16, 15, 14, 13, 12, null", LinkedList.mergeLists(ll_one, ll_two).prints());
+    }
+
+
+    @Test
+    public void test_Lists_If__Empty_when_mergeLists(){
+        LinkedList ll_one = new LinkedList();
+        LinkedList ll_two = new LinkedList();
+        ll_one.append(12);
+        ll_one.append(9);
+        ll_one.append(10);
+        assertEquals("12, 9, 10, null", LinkedList.mergeLists(ll_one, ll_two).prints());
+    }
+
 
 }
