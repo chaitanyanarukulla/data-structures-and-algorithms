@@ -12,7 +12,7 @@
 
 - [Day 4 : LinkedList](./Java/Assets/README/LinkedList_READ.md)
 
-- [Day 5 : Stack And Queues](./Java/Assets/README/StackandQueues_README.md)
+- [Day 5 : Stack And Queues](./Java/Assets/README/StacksandQueues_README.md)
 
   
   
