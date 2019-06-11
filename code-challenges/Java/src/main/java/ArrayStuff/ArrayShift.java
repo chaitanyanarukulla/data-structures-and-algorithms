@@ -1,4 +1,4 @@
-
+package ArrayStuff;
 
 public class ArrayShift {
     public static int[] insertShiftArray(int[] inputArray, int value) {

@@ -1,7 +1,7 @@
 package stacksandqueues;
 
 public class Stack {
-    Node head = null;
+    public Node head = null;
     int size = 0;
 
     public Stack() {
@@ -15,7 +15,7 @@ public class Stack {
     }
 
     public void push(int data) {
-        if(this.head == null){
+        if(isEmpty() == true){
         this.head = new Node(data);
         size ++;
         }else{
@@ -27,13 +27,18 @@ public class Stack {
     }
 
     public int pop() {
-        if (this.head == null) {
+        if (isEmpty() == true) {
             throw new RuntimeException("Unable to remove element from an empty stack");
         }
         int temp = this.head.data;
         this.head = this.head.getPrev();
         size --;
         return temp;
+    }
+
+
+    public boolean isEmpty() {
+        return head == null;
     }
 
 }

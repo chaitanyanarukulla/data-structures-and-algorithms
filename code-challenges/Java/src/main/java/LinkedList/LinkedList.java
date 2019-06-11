@@ -1,6 +1,4 @@
-package linkedList;
-
-import java.io.*;
+package LinkedList;
 
 public class LinkedList {
     public  Node head;
