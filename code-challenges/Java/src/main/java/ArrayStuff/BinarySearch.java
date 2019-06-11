@@ -1,4 +1,4 @@
-
+package ArrayStuff;
 
 
 public class BinarySearch {

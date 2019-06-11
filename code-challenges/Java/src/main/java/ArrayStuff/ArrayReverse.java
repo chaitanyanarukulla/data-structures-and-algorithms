@@ -1,4 +1,4 @@
-package main.java;
+package ArrayStuff;
 
 import java.util.Arrays;
 
