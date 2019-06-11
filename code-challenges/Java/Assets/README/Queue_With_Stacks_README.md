@@ -1,5 +1,5 @@
 ## Queue With Stacks
-  ###PseudoQueue.class
+### PseudoQueue.class
   <!-- Description of the challenge -->
 
 PseudoQueue class will implement our standard queue interface, but will internally only utilize 2 Stack objects. Ensure that you create your class with the following methods:
