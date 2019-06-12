@@ -1,10 +1,11 @@
 package fifoAnimalShelter;
 
+// creating AnimalShelter class
 public class  AnimalShelter<T> {
     Node<T> front, rear;
     private int size;
 
-
+// Animal Constructor
     public AnimalShelter() {
         this.front = null;
         this.rear = null;
@@ -13,16 +14,11 @@ public class  AnimalShelter<T> {
         static class Node<T> {
         Node<T> next;
         T data;
-
-
         public Node(T data){
             this.data = data;
         }
     }
-
-
-
-
+    // method to ENQUEUE
     public void enq(T t) {
         Node a = new Node(t);
             if (front == null) {
@@ -35,7 +31,7 @@ public class  AnimalShelter<T> {
                 size++;
             }
         }
-
+   // Method To Dequeue
     public Object dequeue(String animal){
         Node prev = this.front;
         Node current = this.front;
@@ -49,9 +45,6 @@ public class  AnimalShelter<T> {
                 } else if(current == this.rear){
                     this.rear = prev;
                 }
-//                if(current != prev){
-//                    prev.next = prev.next.next;
-//                }
                 size--;
                 return current.data;
             }
@@ -62,11 +55,10 @@ public class  AnimalShelter<T> {
         }
         return null;
     }
-    public int getSize() {
+    public int getSize()
+    {
         return size;
     }
-
-
 
 }
 
