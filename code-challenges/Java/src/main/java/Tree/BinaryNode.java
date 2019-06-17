@@ -1,16 +1,22 @@
 package Tree;
 
 public class BinaryNode<T> {
-
         T key;
         BinaryNode<T>left;
         BinaryNode<T>right;
+
+    public BinaryNode(T value) {
+        this.key = value;
+        this.left = null;
+        this.right = null;
+    }
 
     public T getKey() {
         return key;
     }
 
     public BinaryNode<T> getLeft() {
+
         return left;
     }
 
@@ -23,6 +29,7 @@ public class BinaryNode<T> {
     }
 
     public void setLeft(BinaryNode<T> left) {
+
         this.left = left;
     }
 
@@ -30,11 +37,6 @@ public class BinaryNode<T> {
         this.right = right;
     }
 
-    public BinaryNode(T value)
-        {
-            this.key = value;
-            this.left = null;
-            this.right = null;
-        }
+
 
 }
