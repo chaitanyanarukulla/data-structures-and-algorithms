@@ -19,6 +19,10 @@
 - [Queues With Stack](./Java/Assets/README/Queue_With_Stacks_README.md)
 
 - [fifo_animal_shelter](./Java/Assets/README/fifoAnimalShelter_README.md)
+
+## Binary Search  Tree
+
+- [Binary Search Tree](./Java/Assets/README/BinaryTree_README.md)
   
   
  
