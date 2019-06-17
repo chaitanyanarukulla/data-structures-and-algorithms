@@ -79,4 +79,9 @@ public class BinaryTree<T> {
     public void setRoot(BinaryNode<T> root) {
         this.root = root;
     }
+
+
+    public BinaryNode<T> getRoot() {
+        return this.root;
+    }
 }
