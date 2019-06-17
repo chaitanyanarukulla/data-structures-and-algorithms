@@ -2,13 +2,10 @@ package Tree;
 
 import java.util.ArrayList;
 
-public class Tree<T> {
-
-
+public class BinaryTree<T> {
     BinaryNode<T> root;
 
-
-    Tree()
+    BinaryTree()
     {
         root = null;
     }
@@ -48,12 +45,13 @@ public class Tree<T> {
     }
 
     public void helperPreorder(BinaryNode<T> node ,ArrayList<T> patato){
+
         patato.add(node.key);
         if(node.left != null){
-            helperInorder(node.left,patato);
+            helperPreorder(node.left,patato);
         }
         if(node.right != null){
-            helperInorder(node.right,patato);
+            helperPreorder(node.right,patato);
         }
 
     }
@@ -62,7 +60,6 @@ public class Tree<T> {
     public ArrayList<T> postOrder()
     {
         ArrayList<T> arrli = new ArrayList<>();
-
         if (this.root != null) {
             helperPostOorder(this.root, arrli);
         }
@@ -71,12 +68,20 @@ public class Tree<T> {
 
     public void helperPostOorder(BinaryNode<T> node ,ArrayList<T> patato){
         if(node.left != null){
-            helperInorder(node.left,patato);
+            helperPostOorder(node.left,patato);
         }
-        patato.add(node.key);
         if(node.right != null){
-            helperInorder(node.right,patato);
+            helperPostOorder(node.right,patato);
         }
         patato.add(node.key);
+    }
+
+    public void setRoot(BinaryNode<T> root) {
+        this.root = root;
+    }
+
+
+    public BinaryNode<T> getRoot() {
+        return this.root;
     }
 }
