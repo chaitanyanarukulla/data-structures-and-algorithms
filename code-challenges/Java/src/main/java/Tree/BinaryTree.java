@@ -3,10 +3,11 @@ package Tree;
 import java.util.ArrayList;
 
 public class BinaryTree<T> {
-    BinaryNode<T> root;
+   public  BinaryNode<T> root;
 
-    BinaryTree()
+    public BinaryTree()
     {
+
         root = null;
     }
 //Inorder
