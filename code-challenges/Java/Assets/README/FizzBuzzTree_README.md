@@ -9,6 +9,19 @@ If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
 Return the tree with its new values.   
  ## Approach & Efficiency
  <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+ 
+ Time O(n)
+ Space O(1)
+ 
+ 
+## API
+1. If the tree node value is divisible by 3 then change the value to "Fizz"
+
+2. If the tree node value is divisible by 5 then change the value to "Buzz"
+
+3. If the tree node value is divisible by 3 and 5 then change the value to "FizzBuzz"
+
+1. If the tree node value is not divisible by 3 or 5 then leave the data of the tree node as is
 
  
  
