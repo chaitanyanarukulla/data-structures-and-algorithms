@@ -23,6 +23,10 @@
 ## Binary Search  Tree
 
 - [Binary Search Tree](./Java/Assets/README/BinaryTree_README.md)
+
+## Fizz Buzz  Tree
+
+- [Fizz Buzz Tree](./Java/Assets/README/FizzBuzzTree_README.md)
   
   
  
