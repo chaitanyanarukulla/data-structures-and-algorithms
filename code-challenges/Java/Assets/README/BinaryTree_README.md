@@ -12,6 +12,7 @@ Define a method for each of the depth first traversals called preOrder, inOrder,
  * `postOrder` - O(n)
  * `add` - O(lg(n))
  * `contains` - O(lg(n))
+ * `breadth_first`-O(n)
  
  
   

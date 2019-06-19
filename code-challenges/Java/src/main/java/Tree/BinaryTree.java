@@ -1,6 +1,9 @@
 package Tree;
 
+
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class BinaryTree<T> {
    public  BinaryNode<T> root;
@@ -85,4 +88,33 @@ public class BinaryTree<T> {
     public BinaryNode<T> getRoot() {
         return this.root;
     }
+
+// breadth First
+    static String breadthFirst(BinaryTree input) {
+        if(input.getRoot() == null)
+            return "null";
+
+        Queue<BinaryNode> q =new LinkedList<>();
+        String ans = "";
+        q.add(input.getRoot());
+
+        while(true) {
+            int levelCount = q.size();
+            if(levelCount == 0)
+                break;
+            while(levelCount > 0)
+            {
+                BinaryNode node = q.peek();
+                System.out.print(node.key + " ");
+                ans += node.key + "\n";
+                q.remove();
+                if(node.left != null)
+                    q.add(node.left);
+                if(node.right != null)
+                    q.add(node.right);
+                levelCount--;
+            }
+        }return ans;
+    }
+
 }

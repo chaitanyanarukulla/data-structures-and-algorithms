@@ -1,5 +1,6 @@
 package Tree;
 
+import Tree.BinarySearchTree;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -32,6 +33,19 @@ public class BinaryTreeTest {
 
     }
 
+    @Test
+    public void testBF(){
+        BinaryTree tonga = new BinaryTree();
+        String expectedOutput = "1\n" +
+                "2\n" +
+                "3\n" +
+                "4\n" +
+                "5\n" +
+                "6\n" +
+                "7\n";
+        assertEquals(expectedOutput, tonga.breadthFirst(test));
+    }
+
 
 
     @Test
@@ -52,4 +66,5 @@ public class BinaryTreeTest {
         assertEquals(
                 new ArrayList<>(Arrays.asList(4,5,2,6,7,3,1)),this.test.postOrder());
     }
+
 }
