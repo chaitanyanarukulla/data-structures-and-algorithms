@@ -117,4 +117,20 @@ public class BinaryTree<T> {
         }return ans;
     }
 
+    public int findMaxValue(BinaryTree input) {
+        if(input.getRoot() == null) throw new IllegalArgumentException();
+        return findMaxValue(input.getRoot());
+    }
+   public int findMaxValue(BinaryNode input) {
+        if (input == null)
+            return Integer.MIN_VALUE;
+        else {
+            int max = (int)input.key;
+            int lMax = findMaxValue(input.left);
+            int rMax = findMaxValue(input.right);
+            max = Math.max(Math.max(max, lMax), rMax);
+            return max;
+        }
+    }
+
 }

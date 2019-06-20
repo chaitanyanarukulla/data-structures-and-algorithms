@@ -35,7 +35,7 @@ public class BinaryTreeTest {
 
     @Test
     public void testBF(){
-        BinaryTree tonga = new BinaryTree();
+        BinaryTree testing = new BinaryTree();
         String expectedOutput = "1\n" +
                 "2\n" +
                 "3\n" +
@@ -43,7 +43,7 @@ public class BinaryTreeTest {
                 "5\n" +
                 "6\n" +
                 "7\n";
-        assertEquals(expectedOutput, tonga.breadthFirst(test));
+        assertEquals(expectedOutput, testing.breadthFirst(test));
     }
 
 
@@ -65,6 +65,11 @@ public class BinaryTreeTest {
     public void test_postOrder() {
         assertEquals(
                 new ArrayList<>(Arrays.asList(4,5,2,6,7,3,1)),this.test.postOrder());
+    }
+
+    @Test
+    public void test_MaxVal() {
+        assertEquals(7,test.findMaxValue(test));
     }
 
 }
