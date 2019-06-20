@@ -13,6 +13,7 @@ Define a method for each of the depth first traversals called preOrder, inOrder,
  * `add` - O(lg(n))
  * `contains` - O(lg(n))
  * `breadth_first`-O(n)
+ * `find-maximum-value`-O(n)
  
  
   
