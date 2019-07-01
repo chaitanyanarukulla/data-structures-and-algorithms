@@ -27,6 +27,10 @@
 ## Fizz Buzz  Tree
 
 - [Fizz Buzz Tree](./Java/Assets/README/FizzBuzzTree_README.md)
+
+## Insertion Sort
+- [Insertion Sort](./Java/Assets/README/LECTURE-NOTES.md)
+
   
   
  
