@@ -31,6 +31,9 @@
 ## Insertion Sort
 - [Insertion Sort](./Java/Assets/README/LECTURE-NOTES.md)
 
+## Merge Sort
+- [Merge Sort](./Java/Assets/README/MergeSort_README.md)
+
   
   
  
