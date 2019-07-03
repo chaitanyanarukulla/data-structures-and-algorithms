@@ -34,6 +34,8 @@
 ## Merge Sort
 - [Merge Sort](./Java/Assets/README/MergeSort_README.md)
 
+## Quick Sort
+- [Quick Sort](./Java/Assets/README/QuickSort_README.md)
   
   
  
