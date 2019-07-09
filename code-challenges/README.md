@@ -38,7 +38,7 @@
 - [Quick Sort](./Java/Assets/README/QuickSort_README.md)
   
  ## HashTables
-- [hashTables](./Java/Assets/README/HashTable_README.md)
+- [hashTables](./Java/Assets/README/Hashtable_README.md)
   
  
   
