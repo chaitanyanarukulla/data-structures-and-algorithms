@@ -39,6 +39,9 @@
   
  ## HashTables
 - [hashTables](./Java/Assets/README/Hashtable_README.md)
+
+ ## RepeatedWord
+- [RepeatedWord](./Java/Assets/README/RepeatedWord_README.md)
   
  
   
