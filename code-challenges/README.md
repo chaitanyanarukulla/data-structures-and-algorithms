@@ -42,4 +42,7 @@
 
  ## RepeatedWord
 - [RepeatedWord](./Java/Assets/README/RepeatedWord_README.md)
+
+ ## TreeIntersection
+- [TreeIntersection](./Java/Assets/README/TreeIntersection_README.md)
   
