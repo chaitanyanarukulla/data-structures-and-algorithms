@@ -47,7 +47,7 @@
 - [TreeIntersection](./Java/Assets/README/TreeIntersection_README.md)
 
  ## Hashmap LeftJoin
-- [Hashmap LeftJoin](./Java/Assets/README/LeftJoin.jpg)
+- [Hashmap LeftJoin](./Java/Assets/README/LeftJoin._README.md)
 
 
   
