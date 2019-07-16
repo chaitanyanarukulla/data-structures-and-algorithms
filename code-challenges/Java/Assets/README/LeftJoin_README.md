@@ -1,5 +1,4 @@
 # Left Join
-- Find and return the first repeated word in a lengthy string
 
  ## Challenge
 - Write a function that LEFT JOINs two hashmaps into a single data structure.
