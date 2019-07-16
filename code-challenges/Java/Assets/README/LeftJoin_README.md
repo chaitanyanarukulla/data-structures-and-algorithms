@@ -6,10 +6,13 @@
 - The first parameter is a hashmap that has word strings as keys, and a synonym of the key as values.
 - The second parameter is a hashmap that has word strings as keys, and antonyms of the key as values Combine the key and corresponding values (if they exist) into a new data structure according to LEFT JOIN logic
  ## Approach & Efficiency
-- Space: O(2n) which is O(n)
-- Time: O(1)
+- Time efficiency would be O(n*k)
+- Space efficiency would be O(n)
 
- ## API and Acknowledgements
+ ## API 
+ - leftJoin(HashMap<String, String> leftHashMap, HashMap<String, String> rightHashMap)
+ 
+ ## Acknowledgements
 - Stephen Chu for Regex assistance
 
 ## Whiteboard Picture
