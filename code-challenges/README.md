@@ -50,7 +50,13 @@
 - [Hashmap LeftJoin](./Java/Assets/README/LeftJoin_README.md)
 
  ## BFT GRAPH
-- [Graph](./Java/Assets/README/Graph_README.md)
+- [Breadth First Graph](./Java/Assets/README/Graph_README.md)
+
+ ## GetEdge
+- [GetEdge](./Java/Assets/README/GetEdge_README.md)
+
+  ## Depth GRAPH
+- [Depth First Graph](./Java/Assets/README/Depth_README.md)
 
 
   
