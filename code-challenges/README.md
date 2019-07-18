@@ -26,13 +26,11 @@
 ## Fizz Buzz  Tree
  - [Fizz Buzz Tree](./Java/Assets/README/FizzBuzzTree_README.md)
 
-## Insertion Sort
+## Sort
  - [Insertion Sort](./Java/Assets/README/LECTURE-NOTES.md)
 
-## Merge Sort
  - [Merge Sort](./Java/Assets/README/MergeSort_README.md)
 
-## Quick Sort
  - [Quick Sort](./Java/Assets/README/QuickSort_README.md)
   
 ## HashTables
